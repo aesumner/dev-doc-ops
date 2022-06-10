@@ -6,3 +6,5 @@ Source control project for:
 - Blog posts
 
 Articles are formatted using markdown.
+
+Public.
