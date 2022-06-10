@@ -1,0 +1,13 @@
+
+grep -rnw './' -e "nacl"
+
+-r recursive
+-n line number
+-w whole word
+
+-e pattern to search
+
+grep --include=\*.ts -rnw './' -e "nacl"
+grep --include=\*.{ts,js} -rnw './' -e "nacl"
+
+
