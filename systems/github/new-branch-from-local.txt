@@ -1,0 +1,53 @@
+
+Intro
+=====
+
+A git workflow for creating a new feature branch locally.
+
+
+Make Project Changes
+====================
+
+Before making any actual project changes...
+
+cd <project_folder_root>
+
+git checkout main
+
+git pull
+
+git branch <new_branch_name>
+
+git checkout <new_branch_name>
+
+git branch --show-current
+
+Make changes
+
+git status
+
+git add *
+
+git commit -m "description of changes made" # this commit will...
+
+git push --set-upstream origin add-pipeline
+
+git push
+
+git status
+
+git log (q)
+git log --pretty=oneline
+
+Confirm new branch exists under repo in github.com WUI
+
+
+Pull Request
+============
+
+When you are ready to request approval for merging into main branch...
+
+...
+
+
+
