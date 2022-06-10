@@ -1,0 +1,33 @@
+
+cat ~/.aws/credentials
+
+aws --profile aws-isp-fe-platform-dev --region eu-west-1 sts get-caller-identity
+
+aws --profile aws-isp-fe-platform-dev --region eu-west-1 s3 ls
+
+aws --profile aws-isp-fe-platform-dev --region eu-west-1 cloudformation list-stacks | grep StackName
+
+aws --profile aws-isp-fe-platform-dev --region eu-west-1 ec2 describe-instances [--filters] [--output table] | jq
+
+aws --profile aws-isp-fe-platform-dev --region eu-west-1 ec2 describe-instances --query "Reservations[*].Instances[*].{Name:Tags[?Key=='Name']|[0].Value}" --output table
+
+aws --profile aws-isp-fe-platform-dev --region eu-west-1 rds describe-db-instances
+
+===
+vpc
+===
+
+aws --profile aws-isp-fe-platform-dev --region eu-west-1 ec2 describe-vpcs
+
+aws --profile aws-isp-fe-platform-dev --region eu-west-1 ec2 describe-subnets
+
+
+
+lambda
+
+aws --profile aws-isp-fe-platform-dev --region eu-west-1 cloudformation list-stacks | grep StackName
+
+aws --profile aws-isp-fe-platform-dev --region eu-west-1 cloudformation list-stack-resources --stack-name CdkWorkshopStack | grep -E "LogicalResourceId|ResourceType"
+
+
+
